@@ -1,8 +1,8 @@
-import serializer_demo as sd
+import songs
+import serializers
 
-song = sd.Song("1", "Water of Love", "Dire Straits")
-serializer = sd.SongSerializer()
+song = songs.Song("1", "Water of Love", "Dire Straits")
+serializer = serializers.ObjectSerializer()
+
 print(serializer.serialize(song, "JSON"))
-print("")
 print(serializer.serialize(song, "XML"))
-# serializer.serialize(song, "YAML")
